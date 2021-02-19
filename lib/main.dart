@@ -6,6 +6,7 @@ import 'package:flutter_demo/ImagePage.dart';
 import 'package:flutter_demo/ListPage.dart';
 import 'package:flutter_demo/PageViewPage.dart';
 import 'package:flutter_demo/RandomWords.dart';
+import 'package:flutter_demo/Rote/HomePage.dart';
 import 'package:flutter_demo/RowColumnWidget.dart';
 import 'package:flutter_demo/SettingPage.dart';
 import 'package:flutter_demo/SliverAppBarPage.dart';
@@ -23,19 +24,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // final wordPair = new WordPair.random();
 
-    return SliverAppBarPage();
+    // return SliverAppBarPage();
 
-    // return MaterialApp(
-    //   title: 'welcome',
-    //   theme: ThemeData(
-    //     primaryColor: Colors.white,
-    //     primarySwatch: Colors.blue,
-    //     visualDensity: VisualDensity.adaptivePlatformDensity,
-    //   ),
-    //   color: Colors.white,
-    //   home: WarpFlexPage()
-    //
-    //   );
+    return MaterialApp(
+      title: 'welcome',
+      theme: ThemeData(
+        primaryColor: Colors.white,
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      color: Colors.white,
+
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('AppBar'),
+        ),
+        body: HomePage(),
+      ),
+    );
   }
 }
 
