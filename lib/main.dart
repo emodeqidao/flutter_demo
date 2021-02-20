@@ -6,6 +6,8 @@ import 'package:flutter_demo/ImagePage.dart';
 import 'package:flutter_demo/ListPage.dart';
 import 'package:flutter_demo/PageViewPage.dart';
 import 'package:flutter_demo/RandomWords.dart';
+import 'package:flutter_demo/Rote/FivePage.dart';
+import 'package:flutter_demo/Rote/FourPage.dart';
 import 'package:flutter_demo/Rote/HomePage.dart';
 import 'package:flutter_demo/RowColumnWidget.dart';
 import 'package:flutter_demo/SettingPage.dart';
@@ -13,6 +15,10 @@ import 'package:flutter_demo/SliverAppBarPage.dart';
 import 'package:flutter_demo/TestPage.dart';
 import 'package:flutter_demo/WrapPage.dart';
 import 'package:flutter_demo/MyFlowDelegate.dart';
+
+import 'Rote/HomePage.dart';
+import 'Rote/TwoPage.dart';
+import 'Rote/ThreePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,19 +34,21 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'welcome',
+      routes: <String, WidgetBuilder> {
+        '/home': (context) => HomePage(),
+        '/two': (context) => TwoPage(),
+        '/three': (context) => ThreePage(),
+        '/four': (context) => FourPage(),
+        '/five': (context) => FivePage(),
+      },
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Colors.blue,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       color: Colors.white,
 
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('AppBar'),
-        ),
-        body: HomePage(),
-      ),
+      home: HomePage(),
     );
   }
 }
