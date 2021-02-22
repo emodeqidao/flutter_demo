@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       title: 'welcome',
       routes: <String, WidgetBuilder> {
         '/home': (context) => HomePage(),
-        '/two': (context) => TwoPage(),
+        '/two': (context) => TwoPageView(),
         '/three': (context) => ThreePage(),
         '/four': (context) => FourPage(),
         '/five': (context) => FivePage(),

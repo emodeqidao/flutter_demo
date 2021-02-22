@@ -13,8 +13,9 @@ class FivePage extends StatelessWidget {
             RaisedButton(
               child: Text('5 button'),
               onPressed: () {
-                Navigator.of(context).pop();
+                // Navigator.of(context).pop();
                 // Navigator.of(context).pushNamed('/three');
+                Navigator.of(context).popUntil(ModalRoute.withName('/two'));
               },
             ),
           ],
